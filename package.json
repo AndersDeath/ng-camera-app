@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gh-prepare": "ng build --configuration production --base-href https://andersdeath.github.io/ng-camera-app/",
+    "gh-deploy": "ngh --dir=dist/ng-camera-app/",
+    "gh": "npm run gh-prepare && npm run gh-deploy"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +32,7 @@
     "@angular/compiler-cli": "~13.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
