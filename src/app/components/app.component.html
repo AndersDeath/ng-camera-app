@@ -1,12 +1,17 @@
 <router-outlet></router-outlet>
 
 
-<div class="container" id="app">
-  <video #video id="video" width="640" height="480" autoplay></video>
+<div class="container" >
+  <video #video class="video-container" autoplay></video>
   <br>
-  <button class="captureBtn" (click)="capture()">Snap Photo</button>
-  <canvas #canvas id="canvas" width="640" height="480"></canvas>
-  <div>
+  <!-- <button class="captureBtn" (click)="startHandler()">On</button> -->
+  <button *ngIf="!isActive" class="captureBtn" (click)="startHandler()">Start</button>
+
+  <button *ngIf="isActive" class="captureBtn" (click)="stopHandler()">Stop</button>
+
+  <button class="captureBtn" (click)="capture()">Capture</button>
+  <canvas #canvas id="canvas" width="1280" height="720"></canvas>
+  <div class="gallery">
       <div class="img" *ngFor="let c of captures">
           <img src="{{ c }}" />
       </div>
