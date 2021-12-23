@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1640184994086,
+  "timestamp": 1640279558068,
   "index": "https://andersdeath.github.io/ng-camera-app/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "https://andersdeath.github.io/ng-camera-app/favicon.ico",
         "https://andersdeath.github.io/ng-camera-app/index.html",
-        "https://andersdeath.github.io/ng-camera-app/main.53a12617650e0fcd.js",
+        "https://andersdeath.github.io/ng-camera-app/main.1c5d704105071988.js",
         "https://andersdeath.github.io/ng-camera-app/manifest.webmanifest",
         "https://andersdeath.github.io/ng-camera-app/polyfills.966af0f5e2a309c9.js",
         "https://andersdeath.github.io/ng-camera-app/runtime.203baa0c92b9647c.js",
-        "https://andersdeath.github.io/ng-camera-app/styles.31ff0407c70ab235.css"
+        "https://andersdeath.github.io/ng-camera-app/styles.293f5f6520bd58eb.css"
       ],
       "patterns": []
     },
@@ -52,12 +52,12 @@
     "https://andersdeath.github.io/ng-camera-app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://andersdeath.github.io/ng-camera-app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://andersdeath.github.io/ng-camera-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://andersdeath.github.io/ng-camera-app/index.html": "5fa176b3def9c03ab30b2393984e0ee08102f75f",
-    "https://andersdeath.github.io/ng-camera-app/main.53a12617650e0fcd.js": "5be10b753d38356f7499a8152e261ae888fd77b6",
+    "https://andersdeath.github.io/ng-camera-app/index.html": "e0899d820a0b5673756dc2f4c762fa43cea1075f",
+    "https://andersdeath.github.io/ng-camera-app/main.1c5d704105071988.js": "f263a276c7f32c036d837546afce17c3022f74fb",
     "https://andersdeath.github.io/ng-camera-app/manifest.webmanifest": "e85f6c330a264062a56da15a45adb877a625939a",
     "https://andersdeath.github.io/ng-camera-app/polyfills.966af0f5e2a309c9.js": "47dbaaeb97d2340b306985bc4e99214adb08957b",
     "https://andersdeath.github.io/ng-camera-app/runtime.203baa0c92b9647c.js": "6bb20972a6d4981a66b9fe2266cbb48d13bc6153",
-    "https://andersdeath.github.io/ng-camera-app/styles.31ff0407c70ab235.css": "a82341171c82d48b833f4ef433f177761e585e09"
+    "https://andersdeath.github.io/ng-camera-app/styles.293f5f6520bd58eb.css": "8764b30e8a5758586f9f4738587deda97c282519"
   },
   "navigationUrls": [
     {
