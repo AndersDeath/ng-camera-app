@@ -57,7 +57,7 @@ export class AppComponent implements OnInit {
       console.log(e);
       const updatedConstraints = {
         ...constraints,
-        deviceId: { exact: e[1].deviceId },
+        // deviceId: { exact: e[1].deviceId },
         advanced: [{
           facingMode: "environment"
         }]
