@@ -40,10 +40,14 @@ export class AppComponent implements OnInit {
 
   public videoDevices = [];
 
+  public canvasSize = {
+    width: 1280,
+    height: 840
+  }
   isActive = false;
   isDesktop = false;
 
-  constructor( private deviceService: DeviceDetectorService) {
+  constructor(private deviceService: DeviceDetectorService) {
   }
   public ngOnInit() {
 
@@ -53,25 +57,39 @@ export class AppComponent implements OnInit {
       console.log(e);
       const updatedConstraints = {
         ...constraints,
-        deviceId: {exact: e[1].deviceId}
+        deviceId: { exact: e[1].deviceId },
+        advanced: [{
+          facingMode: "environment"
+        }]
       };
       console.log(updatedConstraints)
     });
 
 
-   }
+  }
 
 
-public startHandler() {
-  this.startStream(constraints);
-}
+  public startHandler() {
+    this.startStream(constraints);
+  }
 
   public startStream(constraints: any) {
-    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    this.video.nativeElement.addEventListener('loadeddata', () => {
+      this.canvasSize.width = this.video.nativeElement.videoWidth;
+      this.canvasSize.height = this.video.nativeElement.videoHeight;
+    })
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia(constraints).then((stream: any) => {
-          this.video.nativeElement.srcObject = stream;
-          this.video.nativeElement.play();
-          this.isActive = true;
+        this.video.nativeElement.srcObject = stream;
+        this.video.nativeElement.play()
+
+        // setTimeout(() => {
+
+
+        // },100)
+        this.isActive = true;
+      }).then(() => {
+
       });
     }
   }
@@ -83,7 +101,7 @@ public startHandler() {
     const stream = this.video.nativeElement.srcObject;
     const tracks = stream.getTracks();
 
-    tracks.forEach(function(track:any) {
+    tracks.forEach(function (track: any) {
       track.stop();
     });
 
@@ -94,8 +112,8 @@ public startHandler() {
 
 
   public capture() {
-    let context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 1280, 720);
+    let context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, this.canvasSize.width, this.canvasSize.height);
     this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
-}
+  }
 
 }

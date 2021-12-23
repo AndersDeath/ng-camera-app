@@ -5,11 +5,15 @@
     width: 100%;
   }
 
+  .hide {
+    display: none;
+  }
+
 .video-container {
   width: 100%;
   max-width: 1280px;
 }
-    #canvas {
+    .canvas {
         display: none;
     }
 
@@ -17,7 +21,7 @@
       width: 100%;;
     }
     .captureBtn {
-      font-size:64px;
+      font-size:36px;
       width: 100%;
       max-width: 1280px;
     }

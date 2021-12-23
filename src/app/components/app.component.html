@@ -2,15 +2,16 @@
 
 
 <div class="container" >
-  <video #video class="video-container" autoplay></video>
+  <video [ngClass]="{'hide': !isActive}" #video class="video-container" autoplay></video>
+  <canvas #canvas class="canvas" [width]="canvasSize.width" [height]="canvasSize.height"></canvas>
+
   <br>
   <!-- <button class="captureBtn" (click)="startHandler()">On</button> -->
   <button *ngIf="!isActive" class="captureBtn" (click)="startHandler()">Start</button>
 
   <button *ngIf="isActive" class="captureBtn" (click)="stopHandler()">Stop</button>
 
-  <button class="captureBtn" (click)="capture()">Capture</button>
-  <canvas #canvas id="canvas" width="1280" height="720"></canvas>
+  <button  *ngIf="isActive" class="captureBtn" (click)="capture()">Capture</button>
   <div class="gallery">
       <div class="img" *ngFor="let c of captures">
           <img src="{{ c }}" />
