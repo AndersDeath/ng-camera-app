@@ -2,13 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './components/app.component';
+import { AppComponent } from './components/app/app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { CameraComponent } from './components/camera/camera.component';
+import { EntryComponent } from './components/entry/entry.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CameraComponent,
+    EntryComponent
   ],
   imports: [
     BrowserModule,
